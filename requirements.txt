@@ -1,9 +1,10 @@
 setuptools>=68.0.0  # Must be at the TOP of the file
-numpy==1.23.5
-pandas==2.0.3
-statsmodels==0.14.0
+numpy>=2.0.0  # Required for Py3.12
+pandas>=2.2.0
+fredapi>=0.5.0
+statsmodels>=0.14.1
 scikit-learn==1.2.2
 matplotlib==3.7.1
 plotly==5.15.0
-fredapi==0.2.0
 streamlit==1.29.0
+
