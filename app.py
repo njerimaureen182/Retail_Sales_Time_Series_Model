@@ -123,7 +123,7 @@ with st.sidebar.expander("Advanced Model Parameters"):
     s = st.number_input("Seasonal Period (s)", 1, 52, 26)
 
 #fit SARIMAX model
-st.info('Fitting SARIMAX Model...This may take a while.')
+# st.info('Fitting SARIMAX Model...This may take a while.')
 result = fit_model(df['RSXFS'], (p,d,q), (P,D,Q,s))
 
 #generate the forecast
