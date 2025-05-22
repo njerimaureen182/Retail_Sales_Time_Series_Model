@@ -6,7 +6,6 @@ __pycache__/
 
 # Environment / Secrets
 .env
-local_settings.py
 *.env
 .secrets
 
