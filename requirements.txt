@@ -1,8 +1,8 @@
-numpy==1.23.5  # Must come FIRST (key dependency)
-pmdarima==2.0.4  # Newer version with Py3.13 support
+setuptools>=68.0.0  # Provides distutils functionality
+numpy==1.26.4
+pmdarima==2.0.4
 statsmodels==0.14.1
 scikit-learn==1.3.2
-
 streamlit>=1.28.0
 pandas>=2.0.0
 matplotlib>=3.7.0
