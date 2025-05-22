@@ -6,13 +6,10 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import fredapi as fa
-from local_settings import fred as settings
 from statsmodels.tsa.stattools import adfuller
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 from pmdarima import auto_arima
-from sklearn.metrics import mean_absolute_error, mean_squared_error, mean_absolute_percentage_error
-from statsmodels.graphics.tsaplots import plot_acf
 import pickle
 import warnings
 warnings.filterwarnings('ignore')
@@ -24,7 +21,7 @@ st.set_page_config(page_title = 'Sales Forecast App', layout = 'wide')
 def load_data():
 
     #import the API key
-    fred = fa.Fred(settings['API_KEY'])
+    fred = fa.Fred(st.secrets['fred']['API_KEY'])
 
     #fetch and structure the data
     df = fred.get_series('RSXFS').to_frame(name='RSXFS').reset_index()
